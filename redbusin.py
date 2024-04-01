@@ -25,13 +25,13 @@ print(driver.title)
 
 # Select the source location
 driver.find_element(By.ID, "src").send_keys("Ooty")
-WebD.until(EC.visibility_of(driver.find_element(By.XPATH, "//text[text()='Charing Cross']")))
-driver.find_element(By.XPATH, "//text[text()='Charing Cross']").click()
+WebD.until(EC.visibility_of(driver.find_element(By.XPATH, "//text[normalize-space()='Charing Cross']")))
+driver.find_element(By.XPATH, "//text[normalize-space()='Charing Cross']").click()
 
 # Select the destination location
 driver.find_element(By.ID, "dest").send_keys("Bangalore")
-WebD.until(EC.visibility_of(driver.find_element(By.XPATH, "//text[text()='Madiwala']")))
-driver.find_element(By.XPATH, "//text[text()='Madiwala']").click()
+WebD.until(EC.visibility_of(driver.find_element(By.XPATH, "//text[normalize-space()='Madiwala']")))
+driver.find_element(By.XPATH, "//text[normalize-space()='Madiwala']").click()
 
 # Set the travel date
 driver.find_element(By.XPATH, "//span[text()='2']").click()
